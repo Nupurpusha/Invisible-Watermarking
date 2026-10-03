@@ -60,7 +60,7 @@
 
 | 📈 **Metric** | 🎯 **Score** | 🌟 **Status** |
 |:---:|:---:|:---:|
-| **🎯 Bit Accuracy** | `82%` | ![Excellent](https://img.shields.io/badge/Excellent-brightgreen?style=for-the-badge) |
+| **🎯 Bit Accuracy** | `86%` | ![Excellent](https://img.shields.io/badge/Excellent-brightgreen?style=for-the-badge) |
 | **🔍 PSNR** | `49 dB` | ![Outstanding](https://img.shields.io/badge/Outstanding-gold?style=for-the-badge) |
 | **🧬 SSIM** | `0.99` | ![Perfect](https://img.shields.io/badge/Perfect-purple?style=for-the-badge) |
 
