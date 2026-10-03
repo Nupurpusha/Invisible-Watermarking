@@ -124,7 +124,7 @@ mindmap
 
 ```mermaid
 graph TD
-    A[🔐 Watermark Generation<br/>📱 128-bit UUID → SHA-256] --> B[🌊 QDWT + SVD Embedding<br/>🎯 LL Subband of Image]
+    A[🔐 Watermark Generation<br/>📱 128-bit UUID → SHA-256] --> B[🌊 DWT + SVD Embedding<br/>🎯 LL Subband of Image]
     B --> C[🖼️ Watermarked Image<br/>✨ Invisible Enhancement]
     C --> D[📚 Feature Extraction<br/>🔍 Singular Values → Vectors]
     D --> E[🧠 1D CNN Training<br/>🤖 Blind Decoder]
