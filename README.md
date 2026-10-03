@@ -200,7 +200,9 @@ python watermark_system.py
 
 | 🖼️ Original | 🔐 Watermarked | 📊 Quality |
 |:--:|:--:|:--:|
-| <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-87f8-61f8-874a-97460cb979b4/raw?se=2025-07-17T15%3A11%3A05Z&sp=r&sv=2024-08-04&sr=b&scid=dde83397-eeaf-5f32-be80-4d1d41fa2079&skoid=1e6af1bf-6b08-4a04-8919-15773e7e7024&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-17T04%3A21%3A05Z&ske=2025-07-18T04%3A21%3A05Z&sks=b&skv=2024-08-04&sig=8hQ76HMqtQGmwLG%2B6UGmsalEg37l5HmkZ5L0/cbPHhk%3D" width="250"/> | <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-87f8-61f8-874a-97460cb979b4/raw?se=2025-07-17T15%3A11%3A05Z&sp=r&sv=2024-08-04&sr=b&scid=dde83397-eeaf-5f32-be80-4d1d41fa2079&skoid=1e6af1bf-6b08-4a04-8919-15773e7e7024&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-17T04%3A21%3A05Z&ske=2025-07-18T04%3A21%3A05Z&sks=b&skv=2024-08-04&sig=8hQ76HMqtQGmwLG%2B6UGmsalEg37l5HmkZ5L0/cbPHhk%3D" width="250"/> | ![Quality](https://img.shields.io/badge/PSNR-49%20dB-brightgreen?style=for-the-badge) |
+| <img width="422" height="422" alt="image" src="https://github.com/user-attachments/assets/93398967-7ce2-4f75-90de-2d3ddebeb591"/>
+| <img width="415" height="442" alt="image" src="https://github.com/user-attachments/assets/48ed83bc-cef2-4fbf-944b-cebff4832e89" />
+ | ![Quality](https://img.shields.io/badge/PSNR-49%20dB-brightgreen?style=for-the-badge) |
 
 </div>
 
