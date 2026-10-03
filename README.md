@@ -196,13 +196,11 @@ python watermark_system.py
 
 ### 🎨 **Before vs After Comparison**
 
-<div align="center">
+ <div align="center">
 
-| 🖼️ Original | 🔐 Watermarked | 📊 Quality |
-|:--:|:--:|:--:|
-| <img width="422" height="422" alt="image" src="https://github.com/user-attachments/assets/93398967-7ce2-4f75-90de-2d3ddebeb591"/>
-| <img width="415" height="442" alt="image" src="https://github.com/user-attachments/assets/48ed83bc-cef2-4fbf-944b-cebff4832e89" />
- | ![Quality](https://img.shields.io/badge/PSNR-49%20dB-brightgreen?style=for-the-badge) |
+|                                                          🖼️ Original                                                          |                                                           🔐 Watermarked                                                           |                                                📊 Quality                                                |
+| :----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
+| <img src="https://github.com/user-attachments/assets/93398967-7ce2-4f75-90de-2d3ddebeb591" width="280" alt="Original Image" /> | <img src="https://github.com/user-attachments/assets/48ed83bc-cef2-4fbf-944c-becebf4832e89" width="280" alt="Watermarked Image" /> | <img src="https://img.shields.io/badge/PSNR-49%20dB-brightgreen?style=for-the-badge" alt="PSNR 49 dB" /> |
 
 </div>
 
