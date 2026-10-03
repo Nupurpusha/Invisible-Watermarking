@@ -66,10 +66,6 @@
 
 </div>
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00D4FF&icon_color=00D4FF&text_color=ffffff&custom_title=Watermarking%20Performance" width="400">
-</div>
-
 ---
 
 ## <div align="center">✨ **KEY FEATURES** ✨</div>
