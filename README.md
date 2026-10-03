@@ -221,7 +221,7 @@ python watermark_system.py
 
 <div align="center">
 
-🏅 **82% Bit Accuracy** - Exceptional watermark recovery rate  
+🏅 **86% Bit Accuracy** - Exceptional watermark recovery rate  
 🏅 **49 dB PSNR** - Outstanding image quality preservation  
 🏅 **0.99 SSIM** - Perfect structural similarity  
 🏅 **Blind Extraction** - No original image required  
@@ -250,8 +250,8 @@ python watermark_system.py
 
 <div align="center">
 
-[![HimaniMahajan27](https://img.shields.io/badge/@HimaniMahajan27-181717?style=for-the-badge&logo=github)](https://github.com/HimaniMahajan27)
 [![Nupurpusha](https://img.shields.io/badge/@Nupurpusha-181717?style=for-the-badge&logo=github)](https://github.com/Nupurpusha)
+[![HimaniMahajan27](https://img.shields.io/badge/@HimaniMahajan27-181717?style=for-the-badge&logo=github)](https://github.com/HimaniMahajan27)
 [![prabhleen003](https://img.shields.io/badge/@prabhleen003-181717?style=for-the-badge&logo=github)](https://github.com/prabhleen003)
 [![samiksha-bansal1](https://img.shields.io/badge/@samiksha--bansal1-181717?style=for-the-badge&logo=github)](https://github.com/samiksha-bansal1)
 [![Snehajindl24](https://img.shields.io/badge/@Snehajindl24-181717?style=for-the-badge&logo=github)](https://github.com/Snehajindl24)
