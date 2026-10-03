@@ -107,7 +107,7 @@ mindmap
 |:---:|:---:|:---:|
 | **🕵️‍♂️ Blind Extraction** | Works without original image | ![No Original Needed](https://img.shields.io/badge/No%20Original%20Needed-success?style=flat-square) |
 | **🔗 128-bit Watermark** | UUID + SHA-256 encryption | ![Ultra Secure](https://img.shields.io/badge/Ultra%20Secure-critical?style=flat-square) |
-| **🌊 Frequency Domain** | QDWT + SVD embedding | ![Robust](https://img.shields.io/badge/Robust-blue?style=flat-square) |
+| **🌊 Frequency Domain** | DWT + SVD embedding | ![Robust](https://img.shields.io/badge/Robust-blue?style=flat-square) |
 | **🧠 CNN Decoder** | 1D CNN architecture | ![AI Powered](https://img.shields.io/badge/AI%20Powered-purple?style=flat-square) |
 
 </div>
