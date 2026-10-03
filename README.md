@@ -147,7 +147,7 @@ graph TD
 | **Step** | **🔧 Process** | **📝 Description** |
 |:---:|:---:|:---:|
 | **1️⃣** | **🧷 Watermark Generation** | SHA-256 hashed UUID creates unique 128-bit watermark |
-| **2️⃣** | **🌀 QDWT + SVD Embedding** | Embed watermark in LL subband using frequency domain |
+| **2️⃣** | **🌀 DWT + SVD Embedding** | Embed watermark in LL subband using frequency domain |
 | **3️⃣** | **🧾 Dataset Preparation** | Extract singular values for CNN training features |
 | **4️⃣** | **🧠 CNN Decoder Training** | Train 1D CNN to predict watermark from patterns |
 | **5️⃣** | **📈 Performance Evaluation** | Measure PSNR, SSIM, and bit accuracy |
