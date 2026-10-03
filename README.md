@@ -80,7 +80,7 @@
 mindmap
   root((🔐 AI Watermarking))
     🌊 Frequency Domain
-      QDWT Transform
+      DWT Transform
       SVD Decomposition
       LL Subband Embedding
     🧠 Deep Learning
