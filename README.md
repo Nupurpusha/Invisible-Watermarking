@@ -61,8 +61,8 @@
 | 📈 **Metric** | 🎯 **Score** | 🌟 **Status** |
 |:---:|:---:|:---:|
 | **🎯 Bit Accuracy** | `86%` | ![Excellent](https://img.shields.io/badge/Excellent-brightgreen?style=for-the-badge) |
-| **🔍 PSNR** | `49 dB` | ![Outstanding](https://img.shields.io/badge/Outstanding-gold?style=for-the-badge) |
-| **🧬 SSIM** | `0.99` | ![Perfect](https://img.shields.io/badge/Perfect-purple?style=for-the-badge) |
+| **🔍 PSNR** | `59 dB` | ![Outstanding](https://img.shields.io/badge/Outstanding-gold?style=for-the-badge) |
+| **🧬 SSIM** | `0.9998` | ![Perfect](https://img.shields.io/badge/Perfect-purple?style=for-the-badge) |
 
 </div>
 
@@ -238,8 +238,8 @@ python watermark_system.py
 <div align="center">
 
 🏅 **86% Bit Accuracy** - Exceptional watermark recovery rate  
-🏅 **49 dB PSNR** - Outstanding image quality preservation  
-🏅 **0.99 SSIM** - Perfect structural similarity  
+🏅 **59 dB PSNR** - Outstanding image quality preservation  
+🏅 **0.9998 SSIM** - Perfect structural similarity  
 🏅 **Blind Extraction** - No original image required  
 🏅 **128-bit Security** - Military-grade encryption  
 
