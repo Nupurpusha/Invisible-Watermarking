@@ -198,16 +198,9 @@ python watermark_system.py
 
  <div align="center">
 
-|                                                          🖼️ Original                                                          |                                                           🔐 Watermarked                                                           |                                                📊 Quality                                                |
-| :----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
-| <img src="https://github.com/user-attachments/assets/93398967-7ce2-4f75-90de-2d3ddebeb591" width="280" alt="Original Image" /> |  <div align="center">
-
-|                                                          🖼️ Original                                                          |                                                           🔐 Watermarked                                                           |                                                📊 Quality                                                |
-| :----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
-| <img src="https://github.com/user-attachments/assets/93398967-7ce2-4f75-90de-2d3ddebeb591" width="280" alt="Original Image" /> | <img src="https://github.com/user-attachments/assets/48ed83bc-cef2-4fbf-944c-becebf4832e89" width="280" alt="Watermarked Image" /> | <img src="https://img.shields.io/badge/PSNR-49%20dB-brightgreen?style=for-the-badge" alt="PSNR 49 dB" /> |
-
-</div>
- | <img src="https://img.shields.io/badge/PSNR-49%20dB-brightgreen?style=for-the-badge" alt="PSNR 49 dB" /> |
+| 🖼️ Original | 🔐 Watermarked | 📊 Quality |
+|:---:|:---:|:---:|
+| <img src="https://github.com/user-attachments/assets/93398967-7ce2-4f75-90de-2d3ddebeb591" width="280" alt="Original Image" /> | <img src="https://github.com/user-attachments/assets/48ed83bc-cef2-4fbf-944c-becebf4832e89" width="280" alt="Watermarked Image" /> | ![Quality](https://img.shields.io/badge/PSNR-49%20dB-brightgreen?style=for-the-badge) |
 
 </div>
 
