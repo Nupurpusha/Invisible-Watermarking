@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
@@ -12,12 +13,10 @@ import "react-toastify/dist/ReactToastify.css";
 // FastAPI backend URL
 const API_BASE_URL = "http://127.0.0.1:8000";
 
-// The current decoder model is configured for 128 bits.
 const WATERMARK_LENGTH = 128;
 const WAVELET_TYPE = "haar";
 
-// Convert the user's text into a deterministic 128-bit watermark.
-// Important: this creates a hash-derived watermark, not reversible text.
+// Convert entered text to a fixed 128-bit SHA-256-derived watermark.
 async function generateWatermarkBits(text) {
   const encoder = new TextEncoder();
   const data = encoder.encode(text.trim());
@@ -25,46 +24,36 @@ async function generateWatermarkBits(text) {
   const hashBuffer = await crypto.subtle.digest("SHA-256", data);
   const hashBytes = new Uint8Array(hashBuffer);
 
-  const bits = Array.from(hashBytes)
+  return Array.from(hashBytes)
     .map((byte) => byte.toString(2).padStart(8, "0"))
     .join("")
     .slice(0, WATERMARK_LENGTH)
     .split("")
     .map(Number);
-
-  return bits;
 }
 
-// Convert FastAPI error responses into readable messages.
-async function getApiError(response) {
+async function getErrorMessage(response) {
   try {
     const data = await response.json();
-
-    if (typeof data.detail === "string") {
-      return data.detail;
-    }
-
-    return `Request failed with status ${response.status}`;
+    return data.detail || `Request failed (${response.status})`;
   } catch {
-    return `Request failed with status ${response.status}`;
+    return `Request failed (${response.status})`;
   }
 }
 
-// Send the image and watermark bits to FastAPI.
-async function uploadAndWatermark(imageFile, textToEmbed) {
+// Connect frontend to FastAPI /embed endpoint.
+async function uploadAndWatermark(imageFile, text) {
   if (!imageFile) {
     throw new Error("Please select an image.");
   }
 
-  if (!textToEmbed?.trim()) {
-    throw new Error("Please enter text to generate the watermark.");
+  if (!text?.trim()) {
+    throw new Error("Please enter text for the watermark.");
   }
 
-  const watermarkBits = await generateWatermarkBits(textToEmbed);
+  const watermarkBits = await generateWatermarkBits(text);
 
   const formData = new FormData();
-
-  // These field names must match backend/main.py.
   formData.append("image", imageFile);
   formData.append("watermark_length", String(WATERMARK_LENGTH));
   formData.append("watermark_bits", JSON.stringify(watermarkBits));
@@ -76,20 +65,16 @@ async function uploadAndWatermark(imageFile, textToEmbed) {
   });
 
   if (!response.ok) {
-    throw new Error(await getApiError(response));
+    throw new Error(await getErrorMessage(response));
   }
 
-  // The /embed endpoint returns an image/png response, not JSON.
   const imageBlob = await response.blob();
 
-  if (!imageBlob.type.startsWith("image/") || imageBlob.size === 0) {
-    throw new Error("The backend returned an invalid image.");
+  if (!imageBlob.size) {
+    throw new Error("The backend returned an empty image.");
   }
 
-  return {
-    watermarkedImageData: URL.createObjectURL(imageBlob),
-    watermarkBits,
-  };
+  return URL.createObjectURL(imageBlob);
 }
 
 function App() {
@@ -99,18 +84,8 @@ function App() {
   const [error, setError] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // Release the previous generated image URL when it is replaced
-  // or when the component unmounts.
-  useEffect(() => {
-    return () => {
-      if (watermarkedImageData) {
-        URL.revokeObjectURL(watermarkedImageData);
-      }
-    };
-  }, [watermarkedImageData]);
-
-  // Demo login state; this is not Firebase authentication.
   const handleLoginClick = () => {
+    // Demo-only login state; not Firebase authentication.
     setIsLoggedIn(true);
   };
 
@@ -120,17 +95,21 @@ function App() {
     setTextToEmbed(text);
 
     try {
-      const result = await uploadAndWatermark(imageFile, text);
+      const imageUrl = await uploadAndWatermark(imageFile, text);
 
-      setWatermarkedImageData(result.watermarkedImageData);
+      setWatermarkedImageData((previousUrl) => {
+        if (previousUrl) URL.revokeObjectURL(previousUrl);
+        return imageUrl;
+      });
+
       toast.success("Watermark embedded successfully!");
     } catch (err) {
-      console.error("Upload/Watermark Error:", err);
+      console.error("FastAPI embedding error:", err);
 
       const message =
         err instanceof TypeError
-          ? "Could not connect to FastAPI. Check that the backend is running."
-          : err.message || "Failed to embed the watermark.";
+          ? "Cannot connect to FastAPI. Check the backend URL and ensure the server is running."
+          : err.message || "Failed to embed watermark.";
 
       setError(message);
       toast.error(message);
@@ -200,8 +179,6 @@ function App() {
           />
         </Routes>
 
-        {/* Display the generated image if the UploadSection
-            does not already display it. */}
         {watermarkedImageData && (
           <section className="mt-8 rounded-xl bg-white p-6 shadow">
             <h2 className="mb-4 text-xl font-semibold">
@@ -210,7 +187,7 @@ function App() {
 
             <img
               src={watermarkedImageData}
-              alt="Image with embedded watermark"
+              alt="Watermarked result"
               className="max-h-[500px] max-w-full rounded-lg object-contain"
             />
 
